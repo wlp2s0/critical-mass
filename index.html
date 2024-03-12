@@ -17,7 +17,7 @@
     rel="stylesheet">
 </head>
 
-<body>
+<body id="main">
   <nav id="mobile-navigation" class="navigation mobile-navigation">
     <ul id="mobile-menu" class="menu">
       <li>
@@ -45,8 +45,6 @@
   </nav>
 
   <main>
-
-
     <header id="top" class="hero">
       <div class="overlay"></div>
 
@@ -331,16 +329,16 @@
     const hamburgerMenuElement = document.getElementById("hamburger-menu")
     const mobileNavigationElement = document.getElementById("mobile-navigation")
     const mobileMenu = document.getElementById("mobile-menu")
-
-    // --- STATE --- //
-    // let isMobileNavigationOpen = false;
+    const main = document.getElementById("main")
 
     const handleOpen = () => {
       mobileNavigationElement.style = "pointer-events: all; transform: translateY(0);"
+      main.style = "overflow: hidden;"
     }
 
     const handleClose = () => {
       mobileNavigationElement.style = "pointer-events: none; transform: translateY(-110vh);"
+      main.style = ""
     }
 
     const handleHamburgerMenuClick = (e) => {
