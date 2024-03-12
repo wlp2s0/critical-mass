@@ -1,0 +1,387 @@
+body {
+  font-family: "Poppins", sans-serif;
+  color: #e89d49;
+  font-size: 16px;
+}
+
+main {
+  scroll-behavior: smooth;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+header.hero {
+  width: 100vw;
+  height: 100vh;
+  background-color: #ffedcf;
+  background-image: url("./static/background.png");
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+}
+
+.hero .info {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 10%;
+  position: relative;
+  z-index: 1;
+}
+
+.hero .overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  pointer-events: none;
+  /*
+  background: rgb(255, 255, 255);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 95%, rgb(255, 255, 255) 100%);
+  */
+}
+
+.info .title {
+  font-family: "Merriweather", serif;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-size: 5em;
+  margin: 0;
+}
+
+.info .location {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 3em;
+  margin: 0;
+}
+
+.info .subtitle {
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-size: 2em;
+}
+
+.info .event {
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-size: 1.5em;
+}
+
+.hero .people {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  /* padding: 64px; */
+  box-sizing: border-box;
+  bottom: 64px;
+  overflow: hidden;
+  padding: 0 48px;
+  pointer-events: none;
+}
+
+.hero .people .woman {
+  width: auto;
+  height: 60%;
+  margin-left: -180px;
+}
+
+.hero .people .man {
+  width: auto;
+  height: 60%;
+}
+
+.hero .topbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 64px 0;
+  padding-right: 16px;
+}
+
+.hero .topbar .mobile-menu {
+  width: 144px;
+  padding-left: 32px;
+}
+
+.mobile-menu .hamburger {
+  display: none;
+}
+
+.hamburger {
+  width: 36px;
+  display: flex;
+  gap: 6px;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger:hover .line {
+  background-color: #f97500;
+}
+
+.hamburger .line {
+  height: 6px;
+  border-radius: 6px;
+  width: 100%;
+  background-color: #e89d49;
+  transition: background-color 0.25s;
+  /*
+  background-color: #f97500;
+  */
+}
+
+.navigation {
+  display: flex;
+}
+
+.navigation ul.menu {
+  list-style-type: none;
+  text-transform: uppercase;
+
+}
+
+a {
+  color: #e89d49;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.2em;
+  margin: 0;
+  font-weight: 700;
+  transition: color 0.25s;
+}
+
+a:hover {
+  color: #f97500;
+}
+
+.navigation ul.menu.desktop-menu {
+  align-items: center;
+  margin: 0 auto;
+  display: flex;
+  gap: 16px;
+}
+
+.hero .social {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 8px;
+  box-sizing: border-box;
+  align-items: center;
+  padding-right: 32px;
+  /* position: absolute; 
+  right: 0;
+  */
+}
+
+.hero .social img {
+  width: 32px;
+}
+
+.navigation .menu li {}
+
+.language-selector {
+  display: block;
+  /*
+  align-items: center;
+  gap: 2px;
+*/
+}
+
+
+.language-selector .language {
+  width: 30px;
+  height: auto;
+  cursor: pointer;
+}
+
+.mobile-navigation {
+  box-sizing: border-box;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  position: fixed;
+  pointer-events: none;
+  width: 100vw;
+  height: 100vh;
+  background-color: #ffedcf;
+  z-index: 2;
+  transition: all 0.5s;
+  transform: translateY(-110vh);
+  font-size: 3em;
+}
+
+.mobile-navigation .menu {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.mobile-navigation .social {
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+}
+
+.mobile-navigation .social img {
+  width: 48px;
+  height: 48px;
+}
+
+.section {
+  padding: 1em 0;
+}
+
+.section .article {
+  max-width: 768px;
+  margin: 0 auto;
+}
+
+.section .section-title {
+  margin-top: 0;
+}
+
+.section.what-is-it {
+  background-color: #fff8eb;
+}
+
+.section.rules {
+  background-color: #fff8eb;
+}
+
+.event-wrapper {
+  position: relative;
+}
+
+.event-wrapper .overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  pointer-events: none;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0) 75%, rgba(255, 248, 235, 1) 100%);
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  body {
+    font-size: 14px;
+  }
+
+  .hero .topbar {
+    padding-top: 32px;
+    padding-bottom: 0px;
+  }
+
+  .hero .people .woman {
+    display: none;
+  }
+
+  .hero .people .man {
+    height: 40%;
+  }
+
+  .mobile-menu .hamburger {
+    display: flex;
+  }
+
+  .mobile-menu .language-selector {
+    display: none;
+  }
+
+  .navigation ul.menu.desktop-menu {
+    display: none;
+  }
+
+  .hero .social {
+    display: none;
+  }
+
+  .topbar .mobile-language-selector {
+    display: block;
+  }
+
+  /*
+  .info .location {}
+  */
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  body {
+    font-size: 16px;
+  }
+
+  .hero .people .woman {
+    width: auto;
+    height: 40%;
+    margin-left: -20%;
+  }
+
+  .hero .people .man {
+    width: auto;
+    height: 40%;
+    margin-right: -25%;
+  }
+
+  .topbar .mobile-language-selector {
+    display: none;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .hero .people .woman {
+    width: auto;
+    height: 60%;
+    margin-left: -55%;
+  }
+
+  .hero .people .man {
+    width: auto;
+    height: 60%;
+    margin-right: -25%;
+  }
+
+  .mobile-menu .hamburger {
+    display: none;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .hero .people .woman {
+    width: auto;
+    height: 60%;
+    margin-left: -20%;
+  }
+
+  .hero .people .man {
+    width: auto;
+    height: 60%;
+    margin-right: -10%;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1440px) {
+  .hero .people .woman {
+    width: auto;
+    height: 60%;
+    margin-left: -180px;
+  }
+
+  .hero .people .man {
+    width: auto;
+    height: 60%;
+    margin-right: 0px;
+  }
+}
