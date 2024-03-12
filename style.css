@@ -207,6 +207,7 @@ a:hover {
   display: flex;
   flex-flow: column;
   justify-content: space-between;
+  align-items: center;
   position: fixed;
   pointer-events: none;
   width: 100vw;
@@ -226,17 +227,18 @@ a:hover {
 
 .mobile-navigation .social {
   display: flex;
-  gap: 8px;
+  gap: 0.5em;
   padding: 8px;
 }
 
 .mobile-navigation .social img {
+  cursor: pointer;
   width: 48px;
   height: 48px;
 }
 
 .section {
-  padding: 1em 0;
+  padding: 1em;
 }
 
 .section .article {
