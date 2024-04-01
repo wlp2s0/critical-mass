@@ -1,6 +1,6 @@
 body {
   font-family: "Poppins", sans-serif;
-  color: #e89d49;
+  color: #fff;
   font-size: 16px;
   scroll-behavior: smooth;
 }
@@ -17,8 +17,8 @@ img {
 header.hero {
   width: 100vw;
   height: 100vh;
-  background-color: #ffedcf;
-  background-image: url("./static/background.png");
+  background-color: #000000;
+  background-image: url("./static/event.webp");
   background-size: cover;
   background-position: center center;
   position: relative;
@@ -43,10 +43,20 @@ header.hero {
   right: 0;
   left: 0;
   pointer-events: none;
+  background-color: rgba(0, 0, 0, 0.35);
+  z-index: 1;
   /*
   background: rgb(255, 255, 255);
   background: linear-gradient(180deg, rgba(255, 255, 255, 0) 95%, rgb(255, 255, 255) 100%);
   */
+}
+
+.hero .bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
 }
 
 .info .title {
@@ -103,15 +113,21 @@ header.hero {
 }
 
 .hero .topbar {
+  position: relative;
   display: flex;
   justify-content: space-between;
   padding: 64px 0;
   padding-right: 16px;
+  z-index: 3;
 }
 
 .hero .topbar .mobile-menu {
   width: 144px;
   padding-left: 32px;
+}
+
+.hero .topbar .placeholder {
+  width: 144px;
 }
 
 .mobile-menu .hamburger {
@@ -127,14 +143,14 @@ header.hero {
 }
 
 .hamburger:hover .line {
-  background-color: #f97500;
+  background-color: #eaeaea;
 }
 
 .hamburger .line {
+  background-color: #ffffff;
   height: 6px;
   border-radius: 6px;
   width: 100%;
-  background-color: #e89d49;
   transition: background-color 0.25s;
   /*
   background-color: #f97500;
@@ -152,7 +168,7 @@ header.hero {
 }
 
 a {
-  color: #e89d49;
+  color: #ffffff;
   text-decoration: none;
   text-transform: uppercase;
   font-size: 1.2em;
@@ -162,7 +178,7 @@ a {
 }
 
 a:hover {
-  color: #f97500;
+  color: #eaeaea;
 }
 
 .navigation ul.menu.desktop-menu {
@@ -175,18 +191,19 @@ a:hover {
 .hero .social {
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
-  gap: 8px;
+  justify-content: center;
+  gap: 0.5em;
   box-sizing: border-box;
   align-items: center;
-  padding-right: 32px;
+  padding: 1em;
+  font-size: 2em;
   /* position: absolute; 
   right: 0;
   */
 }
 
-.hero .social img {
-  width: 32px;
+.social {
+  font-size: 1.5em;
 }
 
 .navigation .menu li {}
@@ -210,21 +227,20 @@ a:hover {
   box-sizing: border-box;
   display: flex;
   flex-flow: column;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   align-items: center;
   position: fixed;
   pointer-events: none;
   width: 100vw;
   height: 100vh;
-  background-color: #ffedcf;
-  z-index: 2;
+  background-color: #4e4e4e;
+  z-index: 4;
   transition: all 0.5s;
   transform: translateY(-110vh);
   font-size: 2em;
 }
 
 .mobile-navigation .menu {
-  padding-top: 1em;
   display: flex;
   flex-direction: column;
   gap: 0.75em;
@@ -245,6 +261,8 @@ a:hover {
 
 .section {
   padding: 1em;
+  background-color: #eaeaea;
+  color: #000000;
 }
 
 .section .article {
@@ -254,14 +272,6 @@ a:hover {
 
 .section .section-title {
   margin-top: 0;
-}
-
-.section.what-is-it {
-  background-color: #fff8eb;
-}
-
-.section.rules {
-  background-color: #fff8eb;
 }
 
 .event-wrapper {
@@ -276,6 +286,22 @@ a:hover {
   left: 0;
   pointer-events: none;
   background: radial-gradient(circle, rgba(255, 255, 255, 0) 75%, rgba(255, 248, 235, 1) 100%);
+}
+
+.close-button-wrapper {
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+  padding: 0.5em 0.75em;
+  box-sizing: border-box;
+  font-size: 1.5em;
+}
+
+.close-button {
+  color: #fff;
+  border: 0;
+  background-color: transparent;
+  padding: 0;
 }
 
 /* Extra small devices (phones, 600px and down) */
@@ -309,9 +335,11 @@ a:hover {
     display: none;
   }
 
+  /*
   .hero .social {
     display: none;
   }
+  */
 
   .topbar .mobile-language-selector {
     display: block;

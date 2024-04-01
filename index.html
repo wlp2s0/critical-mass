@@ -7,6 +7,7 @@
   <title>Critical mass</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -19,6 +20,11 @@
 
 <body id="main">
   <nav id="mobile-navigation" class="navigation mobile-navigation">
+    <div class="close-button-wrapper">
+      <button id="mobile-navigation-close-button" class="close-button">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
     <ul id="mobile-menu" class="menu">
       <li>
         <a href="#top">home</a>
@@ -31,17 +37,19 @@
       </li>
     </ul>
 
+    <!--
     <footer class="social">
-      <a href="https://www.instagram.com/criticalmass_pisa?igsh=OTF2NmFkeXhsZmtv">
-        <img src="./static/instagram.png" alt="Instagram">
+      <a class="link" href="https://www.instagram.com/criticalmass_pisa?igsh=OTF2NmFkeXhsZmtv">
+        <i class="fa-brands fa-instagram"></i>
       </a>
-      <a href="https://www.facebook.com/groups/332814180479196">
-        <img src="./static/facebook.png" alt="Facebook">
+      <a class="link" href="https://www.facebook.com/groups/332814180479196">
+        <i class="fa-brands fa-facebook"></i>
       </a>
-      <a href="https://t.me/criticalmasspisa">
-        <img src="./static/telegram.png" alt="Telegram">
+      <a class="link" href="https://t.me/criticalmasspisa">
+        <i class="fa-brands fa-telegram"></i>
       </a>
     </footer>
+    -->
   </nav>
 
   <main>
@@ -82,17 +90,20 @@
           </ul>
         </nav>
 
+        <!--
         <div class="social">
           <a href="https://www.instagram.com/criticalmass_pisa?igsh=OTF2NmFkeXhsZmtv">
-            <img src="./static/instagram.png" alt="Instagram">
+            <i class="fa-brands fa-instagram"></i>
           </a>
           <a href="https://www.facebook.com/groups/332814180479196">
-            <img src="./static/facebook.png" alt="Facebook">
+            <i class="fa-brands fa-facebook"></i>
           </a>
           <a href="https://t.me/criticalmasspisa">
-            <img src="./static/telegram.png" alt="Telegram">
+            <i class="fa-brands fa-telegram"></i>
           </a>
         </div>
+        -->
+        <div class="placeholder"></div>
 
         <div class="language-selector mobile-language-selector">
           <a href="./it/index.html">
@@ -116,9 +127,16 @@
         </h4>
       </div>
 
-      <div class="people">
-        <img class="woman" src="./static/ragazza.png" alt="Ragazza in bici">
-        <img class="man" src="./static/ragazzo.png" alt="Ragazza in bici">
+      <div class="bottom social">
+        <a href="https://www.instagram.com/criticalmass_pisa?igsh=OTF2NmFkeXhsZmtv">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="https://www.facebook.com/groups/332814180479196">
+          <i class="fa-brands fa-facebook"></i>
+        </a>
+        <a href="https://t.me/criticalmasspisa">
+          <i class="fa-brands fa-telegram"></i>
+        </a>
       </div>
     </header>
 
@@ -330,6 +348,7 @@
     const mobileNavigationElement = document.getElementById("mobile-navigation")
     const mobileMenu = document.getElementById("mobile-menu")
     const main = document.getElementById("main")
+    const mobileMenuClosebutton = document.getElementById("mobile-navigation-close-button")
 
     const handleOpen = () => {
       mobileNavigationElement.style = "pointer-events: all; transform: translateY(0);"
@@ -352,6 +371,7 @@
 
     // --- LISTENERS --- //
     hamburgerMenuElement.onclick = handleHamburgerMenuClick;
+    mobileMenuClosebutton.onclick = handleClose;
   </script>
 </body>
 
