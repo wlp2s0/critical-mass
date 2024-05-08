@@ -304,8 +304,8 @@ a:hover {
   padding: 0;
 }
 
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
+/* Extra small devices (phones, 800px and down) */
+@media only screen and (max-width: 800px) {
   body {
     font-size: 14px;
   }
@@ -348,10 +348,14 @@ a:hover {
   /*
   .info .location {}
   */
+
+  .hero .social {
+    padding: 8px;
+  }
 }
 
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
+/* Small devices (portrait tablets and large phones, 800px and up) */
+@media only screen and (min-width: 800px) {
   body {
     font-size: 16px;
   }
@@ -369,25 +373,6 @@ a:hover {
   }
 
   .topbar .mobile-language-selector {
-    display: none;
-  }
-}
-
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
-  .hero .people .woman {
-    width: auto;
-    height: 60%;
-    margin-left: -55%;
-  }
-
-  .hero .people .man {
-    width: auto;
-    height: 60%;
-    margin-right: -25%;
-  }
-
-  .mobile-menu .hamburger {
     display: none;
   }
 }
